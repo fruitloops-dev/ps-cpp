@@ -1,23 +1,23 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-if [ "$#" -lt 2 ]; then
-    echo "Usage: ./scripts/new_problem.sh <platform> <name>"
+if [ $# -lt 2 ]; then
+    echo "Usage: ./scripts/new_problem.sh <site> <problem_id>"
     echo "Example: ./scripts/new_problem.sh boj 10828"
     exit 1
 fi
 
-PLATFORM="$1"
-NAME="$2"
-TARGET_DIR="problems/${PLATFORM}"
-TARGET_FILE="${TARGET_DIR}/${NAME}.cpp"
+SITE="$1"
+PROBLEM="$2"
 
-mkdir -p "$TARGET_DIR"
+DIR="problems/$SITE"
+CPP="$DIR/$PROBLEM.cpp"
 
-if [ -f "$TARGET_FILE" ]; then
-    echo "Already exists: $TARGET_FILE"
-    exit 1
+mkdir -p "$DIR"
+
+if [ ! -f "$CPP" ]; then
+    cp templates/main.cpp "$CPP"
+    echo "Created: $CPP"
+else
+    echo "Already exists: $CPP"
 fi
-
-cp templates/main.cpp "$TARGET_FILE"
-echo "Created: $TARGET_FILE"
