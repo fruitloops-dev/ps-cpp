@@ -1,0 +1,18 @@
+# Build outputs
+build/
+*.exe
+*.out
+*.o
+*.obj
+*.dSYM/
+
+# Local test files
+input.txt
+output.txt
+*.in
+*.ans
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+.vscode/*.log

@@ -1,0 +1,57 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C++: build current file",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++20",
+        "-O2",
+        "-Wall",
+        "-Wextra",
+        "-Wshadow",
+        "-DLOCAL",
+        "${file}",
+        "-o",
+        "${workspaceFolder}/build/${fileBasenameNoExtension}"
+      ],
+      "windows": {
+        "args": [
+          "-std=c++20",
+          "-O2",
+          "-Wall",
+          "-Wextra",
+          "-Wshadow",
+          "-DLOCAL",
+          "${file}",
+          "-o",
+          "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+        ]
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "C++: run current file",
+      "type": "shell",
+      "dependsOn": "C++: build current file",
+      "command": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+      "windows": {
+        "command": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe"
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true
+      }
+    }
+  ]
+}
