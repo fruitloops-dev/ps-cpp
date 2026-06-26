@@ -1,7 +1,21 @@
 {
   "C_Cpp.default.cppStandard": "c++17",
   "C_Cpp.default.compilerPath": "g++",
-  "editor.formatOnSave": true,
+  "C_Cpp.intelliSenseEngine": "disabled",
+
+  "editor.quickSuggestions": {
+    "other": "off",
+    "comments": "off",
+    "strings": "off"
+  },
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.tabCompletion": "off",
+  "editor.wordBasedSuggestions": "off",
+  "editor.parameterHints.enabled": false,
+  "editor.inlineSuggest.enabled": false,
+  "editor.snippetSuggestions": "none",
+
   "files.associations": {
     "bits/stdc++.h": "cpp"
   }
