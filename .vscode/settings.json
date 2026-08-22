@@ -11,7 +11,10 @@
     "editor.formatOnType": true,
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
-    "editor.autoIndent": "full"
+    "editor.autoIndent": "full",
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "editor.detectIndentation": false
   },
 
   "files.autoSave": "afterDelay",
