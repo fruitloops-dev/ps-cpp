@@ -14,6 +14,9 @@
     "editor.autoIndent": "full"
   },
 
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+
   "editor.quickSuggestions": {
     "other": "off",
     "comments": "off",
