@@ -1,7 +1,18 @@
 {
   "C_Cpp.default.cppStandard": "c++17",
   "C_Cpp.default.compilerPath": "g++",
-  "C_Cpp.intelliSenseEngine": "disabled",
+  "C_Cpp.intelliSenseEngine": "default",
+  "C_Cpp.autocomplete": "disabled",
+  "C_Cpp.errorSquiggles": "disabled",
+  "C_Cpp.formatting": "vcFormat",
+
+  "[cpp]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnType": true,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.autoIndent": "full"
+  },
 
   "editor.quickSuggestions": {
     "other": "off",
